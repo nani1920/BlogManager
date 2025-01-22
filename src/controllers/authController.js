@@ -6,6 +6,7 @@ import jwt from "jsonwebtoken";
 import { sendVerificationEmail } from "../../lib/sendMail.js";
 
 const JWT_SECRET = process.env.JWT_SECRET;
+const JWT_EXPIRY_TIME = process.env.JWT_EXPIRY_TIME;
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 export const register = async (request, response) => {
@@ -86,7 +87,7 @@ export const login = async (request, response) => {
     };
 
     const jwtToken = jwt.sign(payload, JWT_SECRET, {
-      expiresIn: (JWT_EXPIRY_TIME = "30d"),
+      expiresIn: JWT_EXPIRY_TIME,
     });
     console.log(jwtToken);
     response.status(200).json({ token: jwtToken });
