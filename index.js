@@ -7,6 +7,8 @@ import blogsRouter from "./src/routes/blog.route.js";
 import dotenv from "dotenv"; // Use import if using ESM
 dotenv.config();
 
+const port = process.env.PORT;
+
 const app = express();
 app.use(express.json());
 
@@ -17,7 +19,7 @@ app.get("/", (req, res) => {
   res.status(200).json({ message: "hello" });
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   connectDb();
   console.log("Server is listening at http://localhost:3000");
 });
