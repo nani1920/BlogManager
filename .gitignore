@@ -1,0 +1,22 @@
+
+# Node.js dependencies
+node_modules/
+
+# Environment variables file (contains sensitive data like passwords)
+.env
+
+# Logs
+*.log
+
+# Build output (e.g., dist, build folders)
+dist/
+build/
+
+# Operating system specific files
+.DS_Store   # macOS
+Thumbs.db   # Windows
+
+# IDE or editor files
+.vscode/
+.idea/
+.vercel
