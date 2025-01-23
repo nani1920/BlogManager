@@ -21,5 +21,5 @@ app.get("/", (req, res) => {
 
 app.listen(port, () => {
   connectDb();
-  console.log("Server is listening at http://localhost:3000");
+  console.log("Server is listening at http://localhost:4000");
 });
