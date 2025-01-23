@@ -56,14 +56,14 @@ To set up and run the API locally:
     JWT_SECRET="your_jwt_secret_key"
     PORT=4000
     EMAIL_USER="your_email_user"
-    EMAIL_PASSWORD="your_email_password"
+    PASS_KEY="your_email_passkey"
     
     ```
     *   `MONGODB_URL`: Your MongoDB connection string.
     *   `JWT_SECRET`: A secret key for JWT token generation.
     *   `PORT`: The port number the server will listen on (default 4000).
     *    `EMAIL_USER`: The user email address used to send emails from.
-    *    `EMAIL_PASSWORD`:  The email address password.
+    *    `PASS_KEY`:  The passkey from your email provider's 2FA setup..
 
 ## Usage
 
